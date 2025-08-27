@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mastery Project</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 JavaScript Mastery Project</h1>
+        
+        <!-- Part 1: JavaScript Basics -->
+        <div class="section">
+            <h2>🎯 Part 1: JavaScript Basics</h2>
+            <div class="input-group">
+                <label for="userName">Enter your name:</label>
+                <input type="text" id="userName" placeholder="Your name here...">
+            </div>
+            <div class="input-group">
+                <label for="userAge">Enter your age:</label>
+                <input type="number" id="userAge" placeholder="Your age...">
+            </div>
+            <div class="input-group">
+                <label for="favoriteColor">Choose your favorite color:</label>
+                <select id="favoriteColor">
+                    <option value="">Select a color...</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="purple">Purple</option>
+                    <option value="orange">Orange</option>
+                </select>
+            </div>
+            <button onclick="processUserInfo()">Process Information</button>
+            <div id="userInfoOutput" class="output"></div>
+        </div>
+
+        <!-- Part 2: Functions -->
+        <div class="section">
+            <h2>❤️ Part 2: JavaScript Functions</h2>
+            <div class="grid">
+                <div>
+                    <h3>Calculator Function</h3>
+                    <div class="input-group">
+                        <label>First Number:</label>
+                        <input type="number" id="num1" placeholder="Enter first number">
+                    </div>
+                    <div class="input-group">
+                        <label>Second Number:</label>
+                        <input type="number" id="num2" placeholder="Enter second number">
+                    </div>
+                    <div class="input-group">
+                        <label>Operation:</label>
+                        <select id="operation">
+                            <option value="add">Addition (+)</option>
+                            <option value="subtract">Subtraction (-)</option>
+                            <option value="multiply">Multiplication (×)</option>
+                            <option value="divide">Division (÷)</option>
+                        </select>
+                    </div>
+                    <button onclick="calculate()">Calculate</button>
+                    <div id="calculatorOutput" class="output"></div>
+                </div>
+                
+                <div>
+                    <h3>Text Formatter Function</h3>
+                    <div class="input-group">
+                        <label>Enter text to format:</label>
+                        <textarea id="textInput" rows="3" placeholder="Type your text here..."></textarea>
+                    </div>
+                    <button onclick="formatText('uppercase')">UPPERCASE</button>
+                    <button onclick="formatText('lowercase')">lowercase</button>
+                    <button onclick="formatText('capitalize')">Capitalize</button>
+                    <button onclick="formatText('reverse')">esreveR</button>
+                    <div id="textOutput" class="output"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 3: Loops -->
+        <div class="section">
+            <h2>🔁 Part 3: JavaScript Loops</h2>
+            <div class="grid">
+                <div>
+                    <h3>Number Pattern Generator</h3>
+                    <div class="input-group">
+                        <label>Pattern Size:</label>
+                        <input type="number" id="patternSize" value="5" min="1" max="10">
+                    </div>
+                    <button onclick="generatePattern()">Generate Pattern</button>
+                    <div id="patternOutput" class="output"></div>
+                </div>
+                
+                <div>
+                    <h3>Countdown Timer</h3>
+                    <div class="input-group">
+                        <label>Countdown from (seconds):</label>
+                        <input type="number" id="countdownInput" value="10" min="1" max="60">
+                    </div>
+                    <button onclick="startCountdown()">Start Countdown</button>
+                    <button onclick="stopCountdown()">Stop</button>
+                    <div id="countdownDisplay" class="countdown">Ready to start!</div>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Dynamic List Generator</h3>
+                <div class="input-group">
+                    <label>Enter items (comma separated):</label>
+                    <input type="text" id="listItems" placeholder="apple, banana, orange, grape">
+                </div>
+                <button onclick="generateList()">Generate List</button>
+                <div id="dynamicList" class="output"></div>
+            </div>
+        </div>
+
+        <!-- Part 4: DOM Manipulation -->
+        <div class="section">
+            <h2>🌐 Part 4: DOM Manipulation</h2>
+            
+            <div>
+                <h3>Interactive Task Manager</h3>
+                <div class="input-group">
+                    <label>Add a new task:</label>
+                    <input type="text" id="taskInput" placeholder="Enter a task...">
+                    <button onclick="addTask()">Add Task</button>
+                    <button onclick="clearAllTasks()">Clear All</button>
+                </div>
+                <div id="taskList" class="task-list">
+                    <p>No tasks yet. Add one above!</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Theme Toggle & Element Manipulation</h3>
+                <button onclick="toggleTheme()">Toggle Dark Theme</button>
+                <button onclick="addRandomElement()">Add Random Element</button>
+                <button onclick="animateElements()">Animate All</button>
+                <div id="dynamicContent"></div>
+            </div>
+
+            <div>
+                <h3>Interactive Color Changer</h3>
+                <div id="colorBox" class="color-box" onclick="changeColor()">
+                    Click me to change colors!
+                </div>
+                <p style="text-align: center; font-style: italic;">Click the box above to see DOM manipulation in action!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
